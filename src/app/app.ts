@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,13 +9,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = 'portfolio';
-  fullText = "Hello, I'm Vanshika Parihar";
-  ft = 'Software development Engineer I';
+  fullText = "Hello, I'm Vanshika Parihar 👋";
+  ft = 'Software development Engineer II';
   displayedText = '';
   displayedText2 = '';
   private index = 0;
   private index2 = 0;
-
+  constructor(private el: ElementRef) {}
   ngOnInit() {
     this.typeWriter();
   }
@@ -37,5 +37,23 @@ export class App {
       this.index2++;
       setTimeout(() => this.typeWriterSecond(), 100);
     }
+  }
+   ngAfterViewInit(): void {
+    this.revealOnScroll(); // Trigger immediately on load
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.revealOnScroll();
+  }
+
+  private revealOnScroll(): void {
+    const cards = this.el.nativeElement.querySelectorAll('.project-card');
+    cards.forEach((card: HTMLElement) => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        card.classList.add('appear');
+      }
+    });
   }
 }

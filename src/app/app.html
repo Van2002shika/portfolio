@@ -1,75 +1,94 @@
-<!-- Nav tabs -->
-<ul class="nav nav-pills pt-2 pb-2 px-5 d-flex" id="myTab" role="tablist">
-  <li class="my-0 ml-0">
-    <a
-      class="nav-link active"
-      id="home-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#home"
-      role="tab"
-      aria-controls="home"
-      aria-selected="true"
-    >
-      Home
-    </a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a
-      class="nav-link"
-      id="profile-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#profile"
-      role="tab"
-      aria-controls="profile"
-      aria-selected="false"
-    >
-      About
-    </a>
-  </li>
-  <li class="nav-item mr-5" role="presentation">
-    <a
-      class="nav-link"
-      id="messages-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#messages"
-      role="tab"
-      aria-controls="messages"
-      aria-selected="false"
-    >
-      Experience
-    </a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a href="" class="im">v</a>
-  </li>
-</ul>
+<!-- 🌑 Elegant Black Navbar -->
+<nav class="navbar-container d-flex align-items-center justify-content-between px-5 py-3">
+  <div class="brand-name gradient-text fw-bold">Vanshika.</div>
+
+  <ul class="nav nav-pills d-flex align-items-center gap-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link active"
+        id="home-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#home"
+        role="tab"
+        aria-controls="home"
+        aria-selected="true"
+      >
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        id="profile-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#profile"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+      >
+        <i class="fa-solid fa-user"></i> About
+      </a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        id="messages-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#messages"
+        role="tab"
+        aria-controls="messages"
+        aria-selected="false"
+      >
+        <i class="fa-solid fa-briefcase"></i> Experience
+      </a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        id="contact-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#contact"
+        role="tab"
+        aria-controls="contact"
+        aria-selected="false"
+      >
+        <i class="fa-solid fa-envelope"></i> Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+
 
 <!-- Tab panes -->
-<div class="tab-content px-4 pt-5 background height">
+<div class="tab-content text-white px-5 pt-5 background height">
   <div
-    class="tab-pane active"
+    class="tab-pane show active"
     id="home"
     role="tabpanel"
     aria-labelledby="home-tab"
   >
-    <div class="row">
-      <div class="col-sm-6">
+    <div class="row mb-5 justify-content-center mx-5">
+      <div class="col-sm-4 mt-5 mx-5">
         <h1 class="typewriter">{{ displayedText }}</h1>
 
         <h4 class="mt-4">{{ displayedText2 }}</h4>
         <p class="mt-4">
+          Hi, I’m Vanshika Parihar, a passionate Software Development Engineer
+          specializing in building efficient, scalable, and user-centric web
+          applications. I thrive on turning complex problems into simple,
+          elegant digital solutions using Angular19, TypeScript,PHP, and
+          AdonisJS. My work focuses on performance, clean architecture, and
+          modern UI experiences — all while maintaining robust backend
+          integrity.
+        </p>
+        <p class="mt-4">
           <button class="cv">GitHub</button><button class="cv">cv</button>
         </p>
-        <!-- <p class="mt-2">
-    I'm a Software Developer Engineer with hands-on experience in designing,
-    developing, testing, and scaling web applications. Proficient in Angular,
-    TypeScript, PHP, and AdonisJS, with full-stack development, RESTful API
-    design, and SaaS implementation experience. Improved application
-    performance, strengthened data security, and delivered reliable software
-    solutions in Agile team environments.
-  </p> -->
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4 mt-5 mx-5">
         <div class="card">
           <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
           <div class="card-body"></div>
@@ -78,283 +97,492 @@
     </div>
   </div>
   <div
-    class="tab-pane"
+    class="tab-pane fade"
     id="profile"
     role="tabpanel"
     aria-labelledby="profile-tab"
   >
-    <div class="row mt-3">
-      <h5>About</h5>
+    <div class="container my-5">
+      <div class="row align-items-start gy-5">
+        <!-- 🧠 About Section -->
+        <div class="col-md-12 fade-in-left">
+          <div class="about-card p-4 shadow-lg rounded-4">
+            <h3 class="fw-bold gradient-text mb-3 text-center">About Me</h3>
+            <p class="about-text">
+              I’m a <b>Software Development Engineer</b> with a strong passion
+              for building dynamic, scalable, and high-performance web
+              applications. Skilled in <b>Angular</b>, <b>TypeScript</b>,
+              <b>PHP</b>, and <b>AdonisJS</b>, I specialize in creating seamless
+              front-to-back solutions that blend clean design with efficient
+              functionality.
+            </p>
+            <p class="about-text">
+              My experience spans <b>full-stack development</b>,
+              <b>RESTful API design</b>, and <b>SaaS implementation</b>, where
+              I’ve enhanced performance, optimized databases, and strengthened
+              data security. Driven by curiosity and precision, I focus on
+              delivering robust, user-centric solutions that empower teams and
+              improve business efficiency in <b>Agile environments</b>.
+            </p>
+            <div class="mt-4 d-flex justify-content-center gap-3 social-links">
+              <!-- GitHub -->
+              <a
+                href="https://github.com/vanshikaparihar"
+                target="_blank"
+                class="social-btn"
+                title="Visit my GitHub"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
 
-      <div class="col-sm-6"></div>
-      <div class="col-sm-6">
-        <p class="mt-2">
-          I'm a Software Developer Engineer with hands-on experience in
-          designing, developing, testing, and scaling web applications.
-          Proficient in Angular, TypeScript, PHP, and AdonisJS, with full-stack
-          development, RESTful API design, and SaaS implementation experience.
-          Improved application performance, strengthened data security, and
-          delivered reliable software solutions in Agile team environments.
-        </p>
+              <!-- LinkedIn -->
+              <a
+                href="https://linkedin.com/in/vanshikaparihar"
+                target="_blank"
+                class="social-btn linkedin"
+                title="Connect on LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 💼 Internship Section -->
+      <div class="row justify-content-center mt-5">
+        <!-- 💼 Experience Section -->
+        <div class="col-md-5 fade-in-right">
+          <div class="card experience-card shadow-lg rounded-4 p-4">
+            <div class="card-body">
+              <h3 class="fw-bold gradient-text mb-3 text-center">Experience</h3>
+              <h6 class="fw-semibold text-white">
+                Software Development Engineer II — Ubitech Solutions
+                <span class="d-block text-muted small"
+                  >Gwalior, India | March 2024 – Present</span
+                >
+              </h6>
+
+              <p class="card-text mt-3 text-justify">
+                As a <b>Software Development Engineer</b> at
+                <b>Ubitech Solutions</b>, I’ve played a key role in designing,
+                developing, and deploying enterprise applications across
+                <b>HRMS</b>, <b>Recruitment</b>, and <b>CRM</b> domains. My
+                focus is building scalable systems that drive performance and
+                efficiency for multiple client organizations.
+              </p>
+
+              <p class="card-text mt-3 text-justify">
+                I specialize in <b>Angular</b> and <b>AdonisJS</b>-based
+                full-stack development, implementing
+                <b>SaaS architectures</b> and optimized <b>REST APIs</b>. My
+                contributions include improving system responsiveness by 45% and
+                enhancing backend reliability through query optimization and
+                secure access control.
+              </p>
+
+              <p class="card-text mt-3 text-justify">
+                Through collaboration and continuous learning, I’ve refined my
+                skills in <b>API efficiency</b>, <b>scalable design</b>, and
+                <b>Agile development</b>, creating impactful software solutions
+                that balance performance with user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="internship-card p-4 shadow-lg rounded-4 text-center">
+            <h3 class="fw-bold gradient-text mb-4">Internship</h3>
+
+            <div class="row align-items-center gy-4">
+              <!-- Internship Info -->
+              <div class="col-md-6 text-md-start text-center">
+                <h5 class="fw-semibold text-white">Web Development Intern</h5>
+                <p class="mb-1 text-muted">
+                  Ubitech Solutions | Gwalior, India
+                </p>
+                <p class="edu-year">January 2023 – June 2023</p>
+                <p class="about-text mt-3">
+                  Completed an in-depth internship at <b>Ubitech Solutions</b>,
+                  where I gained practical experience in developing responsive,
+                  data-driven web applications using <b>Angular</b>,
+                  <b>TypeScript</b>, and <b>PHP</b>. Worked closely with the
+                  engineering team to enhance system efficiency, implement new
+                  UI features, and optimize API integrations for better
+                  performance across HRMS and CRM modules.
+                </p>
+
+                <a
+                  href="assets/certificates/ubitech-internship-certificate.jpg"
+                  target="_blank"
+                  class="cv mt-3 d-inline-flex align-items-center gap-2"
+                >
+                  <i class="fa-solid fa-eye"></i> View Certificate
+                </a>
+              </div>
+
+              <!-- Certificate Image -->
+              <div class="col-md-6 text-center">
+                <div class="certificate-frame mx-auto">
+                  <img
+                    src="assets/certificates/ubitech-internship-certificate.jpg"
+                    alt="Ubitech Solutions Internship Certificate"
+                    class="img-fluid rounded-4 shadow-sm"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🎓 Education Section -->
+      <div class="row justify-content-center mt-5 fade-in-up">
+        <div class="col-sm-4">
+          <div class="education-card p-4 text-center shadow-lg rounded-4">
+            <h3 class="fw-bold gradient-text mb-3">Education</h3>
+
+            <div class="edu-item mb-4">
+              <h5 class="fw-semibold">
+                Master of Business Administration (MBA)
+              </h5>
+              <p class="mb-1 text-muted">Vikrant University, Gwalior, India</p>
+              <p class="edu-year">Expected July 2025 (Pursuing)</p>
+            </div>
+
+            <div class="edu-item">
+              <h5 class="fw-semibold">Bachelor of Commerce (Computers)</h5>
+              <p class="mb-1 text-muted">Jiwaji University, Gwalior, India</p>
+              <p class="edu-year">Completed June 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="skills-card p-4 text-center shadow-lg rounded-4">
+            <h3 class="fw-bold gradient-text mb-4">Technical Skills</h3>
+
+            <div class="row justify-content-center text-center gy-4">
+              <!-- Frontend -->
+              <div class="col-md-4">
+                <h5 class="fw-semibold mb-3 text-white">
+                  <i class="fa-solid fa-code"></i> Frontend
+                </h5>
+                <div
+                  class="skills-group d-flex flex-wrap justify-content-center gap-3"
+                >
+                  <div class="skill-item">
+                    <i class="fa-brands fa-angular"></i> Angular
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-solid fa-code"></i> TypeScript
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-js"></i> JavaScript
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-html5"></i> HTML5
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-css3-alt"></i> CSS3
+                  </div>
+                </div>
+              </div>
+
+              <!-- Backend -->
+              <div class="col-md-4">
+                <h5 class="fw-semibold mb-3 text-white">
+                  <i class="fa-solid fa-server"></i> Backend
+                </h5>
+                <div
+                  class="skills-group d-flex flex-wrap justify-content-center gap-3"
+                >
+                  <div class="skill-item">
+                    <i class="fa-brands fa-node-js"></i> AdonisJS
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-php"></i> PHP
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-solid fa-cube"></i> Node.js
+                  </div>
+                </div>
+              </div>
+
+              <!-- Database & Tools -->
+              <div class="col-md-4">
+                <h5 class="fw-semibold mb-3 text-white">
+                  <i class="fa-solid fa-database"></i> Database & Tools
+                </h5>
+                <div
+                  class="skills-group d-flex flex-wrap justify-content-center gap-3"
+                >
+                  <div class="skill-item">
+                    <i class="fa-solid fa-database"></i> MySQL
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-git-alt"></i> Git
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-solid fa-cloud"></i> SaaS
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
   <div
     class="tab-pane"
     id="messages"
     role="tabpanel"
     aria-labelledby="messages-tab"
   >
-    <div class="row mt-3">
-      <h5>Experience</h5>
+    <div class="container my-5">
+      <!-- Header -->
+      <h2 class="fw-bold gradient-text text-center mb-5">Experience</h2>
 
-      <div class="col-sm-4">
-        <img
-          src="../../public/ubitech_solutions_pvt_ltd_logo.jpg"
-          alt=""
-          width="200px"
-        />
+      <!-- Company Info -->
+      <div class="row align-items-center justify-content-center gy-4">
+        <div class="col-md-3 text-center">
+          <div class="company-logo p-3 rounded-4 shadow-sm">
+            <img
+              src="ubitech_solutions_pvt_ltd_logo.jpg"
+              alt="Ubitech Solutions Logo"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+
+        <div class="col-md-7 text-center text-md-start">
+          <h4 class="fw-semibold text-white mb-2">
+            Software Development Engineer
+          </h4>
+          <p class="text-muted mb-1">Ubitech Solutions | Gwalior, India</p>
+          <p class="edu-year">March 2024 – Present</p>
+          <p class="about-text mt-3">
+            As a <b>Software Development Engineer</b> at
+            <b>Ubitech Solutions</b>, I’ve been responsible for architecting,
+            developing, and deploying large-scale SaaS-based enterprise
+            applications spanning <b>HRMS</b>, <b>Recruitment</b>, and
+            <b>CRM</b> domains. My role focuses on full-stack development with
+            <b>Angular</b> and <b>AdonisJS</b>, optimizing performance, and
+            ensuring scalability for global clients.
+          </p>
+        </div>
       </div>
-      <div class="col-sm-8">
-        <h6>
-          Software Development Engineer Gwalior, India | March 2024 – Present
-        </h6>
-        <p class="mt-3">
-          As a Software Development Engineer at Ubitech Solutions, I have been
-          instrumental in architecting, developing, and deploying large-scale
-          enterprise applications spanning HRMS, Recruitment, and CRM domains.
-          My role involves end-to-end development using modern web technologies,
-          database optimization, and building scalable SaaS solutions that
-          enhance operational efficiency for multiple organizations.
-        </p>
-      </div>
-      <div class="row d-flex justifiedcenter mt-5">
-        <div class="card" style="width: 60%">
-          <div class="card-body">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-              <ol class="carousel-indicators">
-                <li
-                  data-bs-target="#carouselId"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="First slide"
-                ></li>
-                <li
-                  data-bs-target="#carouselId"
-                  data-bs-slide-to="1"
-                  aria-label="Second slide"
-                ></li>
-                <li
-                  data-bs-target="#carouselId"
-                  data-bs-slide-to="2"
-                  aria-label="Third slide"
-                ></li>
-              </ol>
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <img
-                    src="Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM.png"
-                    class="d-block"
-                    alt="First slide"
-                    width="1000px"
-                  />
-                  <h6>
-                    HRMS (Human Resource Management System) Developed and
-                    optimized a complete HRMS platform that automated key
-                    workforce management operations, helping organizations
-                    streamline their HR workflows.
-                  </h6>
-                  <!-- <p>
-            Key Achievements: Engineered and deployed 5+ core HR modules,
-            including Employee Management, Attendance Tracking, Payroll
-            Processing, and Performance Evaluation. Automated HR processes,
-            reducing manual workload by 35% and improving data accuracy.
-            Refactored and optimized SQL queries and backend APIs, achieving 45%
-            faster data retrieval. Integrated role-based access control (RBAC)
-            and secure authentication mechanisms to ensure compliance with data
-            protection and organizational hierarchy policies. Contributed to
-            UI/UX improvements to enhance usability for both HR teams and
-            employees.
-          </p> -->
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM (1).png"
-                    class="d-block"
-                    alt="Second slide"
-                    width="1000px"
-                  />
-                  <h6>
-                    UbiRecruit (Recruitment Management System) Designed and
-                    developed a recruitment management platform that simplified
-                    the entire hiring cycle—from candidate sourcing to
-                    onboarding.
-                  </h6>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="1-new-message-10-23-2025_03_59_PM.png"
-                    class="d-block"
-                    alt="Third slide"
-                    width="1000px"
-                  />
-                  <h6>
-                    UbiCRM (Customer Relationship Management System) Architected
-                    a robust and scalable CRM platform that empowered sales
-                    teams to manage leads, deals, and clients with precision and
-                    real-time insights.
-                  </h6>
-                </div>
+
+      <!-- 🌟 Experience Section -->
+      <div class="container my-5">
+        <h2 class="fw-bold gradient-text text-center mb-5">
+          Experience & Projects
+        </h2>
+
+        <!-- 🟣 MAIN PROJECT -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 col-md-10">
+            <div class="project-card p-4 rounded-4 text-center">
+              <div class="project-image mb-4">
+                <img
+                  src="1-new-message-10-23-2025_03_59_PM.png"
+                  alt="UbiCRM Project"
+                  class="img-fluid rounded-4 shadow-sm"
+                />
               </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselId"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselId"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+              <h3 class="fw-bold text-gradient mb-3">
+                UbiCRM — Customer Relationship Management
+              </h3>
+              <p class="about-text">
+                <b>UbiCRM</b> is a multi-tenant SaaS CRM designed to help sales
+                teams manage leads, deals, and customers efficiently through
+                automation, analytics, and real-time dashboards. As the
+                <b>lead full-stack developer</b>, I developed and optimized both
+                frontend and backend systems using Angular and AdonisJS.
+              </p>
+              <div class="text-start mx-auto" style="max-width: 800px">
+                <ul class="about-text">
+                  <li>
+                    Designed <b>modular CRM architecture</b> covering Leads,
+                    Deals, and Activities.
+                  </li>
+                  <li>
+                    Developed <b>REST APIs</b> and optimized SQL queries to
+                    enhance backend speed by 45%.
+                  </li>
+                  <li>
+                    Implemented
+                    <b>multi-organization SaaS structure</b> ensuring data
+                    isolation and security.
+                  </li>
+                  <li>
+                    Integrated <b>Highcharts.js</b> for sales trend analytics
+                    and performance tracking.
+                  </li>
+                  <li>
+                    Strengthened platform security with
+                    <b>token authentication</b> and encrypted ID system.
+                  </li>
+                  <li>
+                    Collaborated in <b>Agile sprints</b> to deliver scalable CRM
+                    updates and UX improvements.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <h5>Technical Skills</h5>
-      <div class="container-sm">
-        <div class="row">
-          <div class="col-sm-4 mt-3">
-            <h6>Frontend</h6>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card text-start">
-                  <div class="card-body">
-                    <p class="card-title">Angular 19, Angular JS, TypeScript</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 65%"
-                        aria-valuenow="65"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        65%
-                      </div>
-                    </div>
-                    <p class="card-title mt-3">HTML5, CSS3, JavaScript</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 75%"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        75%
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+        <!-- 🟢 OTHER PROJECTS -->
+        <div class="row justify-content-center g-4">
+          <!-- HRMS -->
+          <div class="col-lg-5 col-md-6">
+            <div
+              class="project-card p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-between"
+            >
+              <div class="project-image mb-4">
+                <img
+                  src="Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM.png"
+                  alt="HRMS Project"
+                  class="img-fluid rounded-4 shadow-sm"
+                />
               </div>
+              <h4 class="fw-bold text-gradient mb-2">
+                HRMS — Human Resource Management System
+              </h4>
+              <p class="about-text">
+                Built a robust HRMS platform to automate workforce management
+                including employee records, payroll, and attendance tracking.
+                The platform improved HR productivity by <b>35%</b>.
+              </p>
+              <ul
+                class="about-text text-start mx-auto"
+                style="max-width: 400px"
+              >
+                <li>
+                  Developed interactive employee dashboards and payroll
+                  automation workflows.
+                </li>
+                <li>
+                  Integrated backend APIs for HR operations and performance
+                  reports.
+                </li>
+                <li>
+                  Enhanced user accessibility and data accuracy across modules.
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col-sm-4 mt-3">
-            <h6>Backend</h6>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card text-start">
-                  <div class="card-body">
-                    <p class="card-title">AdonisJS</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 75%"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        75%
-                      </div>
-                    </div>
-                    <p class="card-title mt-3">PHP, Node.js</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 55%"
-                        aria-valuenow="55"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        55%
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+          <!-- Recruitment -->
+          <div class="col-lg-5 col-md-6">
+            <div
+              class="project-card p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-between"
+            >
+              <div class="project-image mb-4">
+                <img
+                  src="Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM (1).png"
+                  alt="Recruitment Project"
+                  class="img-fluid rounded-4 shadow-sm"
+                />
               </div>
-            </div>
-          </div>
-          <div class="col-sm-4 mt-3">
-            <h6>Databases & Version Control</h6>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card text-start">
-                  <div class="card-body">
-                    <p class="card-title">MySQL</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 55%"
-                        aria-valuenow="55"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        55%
-                      </div>
-                    </div>
-                    <p class="card-title mt-3">Git, GitHub</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 55%"
-                        aria-valuenow="55"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        55%
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h4 class="fw-bold text-gradient mb-2">
+                UbiRecruit — Recruitment Management System
+              </h4>
+              <p class="about-text">
+                Created an automated recruitment platform that streamlined
+                candidate sourcing, interview scheduling, and onboarding,
+                reducing average hiring time by <b>25%</b>.
+              </p>
+              <ul
+                class="about-text text-start mx-auto"
+                style="max-width: 400px"
+              >
+                <li>
+                  Built recruiter dashboards with real-time candidate tracking.
+                </li>
+                <li>
+                  Added intelligent filtering and search for faster hiring
+                  workflows.
+                </li>
+                <li>
+                  Optimized backend logic for seamless communication and status
+                  updates.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- 🌌 Contact Tab -->
+<div
+  class="tab-pane fade-in-up"
+  id="contact"
+  role="tabpanel"
+  aria-labelledby="contact-tab"
+>
+  <div class="container my-5 text-center">
+    <h2 class="fw-bold gradient-text mb-4">Let’s Connect ✨</h2>
+    <p class="about-text mb-5" style="max-width: 700px; margin: auto;">
+      I love connecting with creative minds, developers, and innovators.  
+      Whether you want to collaborate on a project, discuss tech ideas, or just say hi — feel free to reach out!
+    </p>
+
+    <!-- 🌠 Quote Card -->
+    <div class="quote-card mx-auto mb-5">
+      <p class="quote-text">
+        “Great things are done by a series of small things brought together.”
+      </p>
+      <span class="quote-author">– Vincent Van Gogh</span>
+    </div>
+
+    <!-- 🌐 Contact Options -->
+    <div class="row justify-content-center g-4 mt-4">
+      <!-- Email -->
+      <div class="col-md-3">
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h5>Email</h5>
+          <p>vanshika.parihar@example.com</p>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col-md-3">
+        <div class="contact-card">
+          <i class="fa-brands fa-linkedin"></i>
+          <h5>LinkedIn</h5>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
+        </div>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-md-3">
+        <div class="contact-card">
+          <i class="fa-brands fa-github"></i>
+          <h5>GitHub</h5>
+          <a href="https://github.com/yourusername" target="_blank">View My Work</a>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-3">
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h5>Location</h5>
+          <p>Gwalior, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 
 <router-outlet />
