@@ -79,7 +79,7 @@
 
 /* 🖱️ SCROLLABLE AREA */
 .height {
-  height: 94vh;
+  height: 70vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #7d52a1 #000;
@@ -477,7 +477,7 @@
 /* 🌑 NAVBAR BASE - Pure Black */
 .navbar-container {
   background: #000; /* solid black */
-  border-bottom: 1px solid rgba(125, 82, 161, 0.25);
+  border-bottom: 2px solid rgba(125, 82, 161, 0.322);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
   position: sticky;
   top: 0;
@@ -643,4 +643,85 @@
   color: #9b6bc5;
   margin-top: 8px;
   font-weight: 500;
+}
+/* 🧍‍♀️ Profile Card Styling */
+.profile-card {
+  width: 320px;
+  height: 320px;
+  border: 2px solid rgba(125, 82, 161, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(155, 107, 197, 0.6);
+  box-shadow: 0 0 35px rgba(155, 107, 197, 0.4);
+}
+
+/* Profile image */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: brightness(0.95);
+  transition: all 0.4s ease;
+}
+
+.profile-card:hover .profile-img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* Soft glow overlay */
+.profile-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 80%,
+    rgba(125, 82, 161, 0.2),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Smooth fade-in animation for home */
+#home {
+  animation: fadeInUp 0.9s ease both;
+}
+/* 🌑 Footer */
+.footer {
+  background: #000;
+  border-top: 1px solid rgba(125, 82, 161, 0.25);
+  color: #dcdcdc;
+  text-align: center;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -4px 12px rgba(125, 82, 161, 0.15);
+}
+
+
+/* Copyright */
+.footer-copy {
+  color: #aaa;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* Subtle glowing line */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #7d52a1, transparent);
+  box-shadow: 0 0 12px rgba(125, 82, 161, 0.5);
 }

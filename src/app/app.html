@@ -1,8 +1,15 @@
+
 <!-- 🌑 Elegant Black Navbar -->
-<nav class="navbar-container d-flex align-items-center justify-content-between px-5 py-3">
+<nav
+  class="navbar-container d-flex align-items-center justify-content-between px-5 py-3"
+>
   <div class="brand-name gradient-text fw-bold">Vanshika.</div>
 
-  <ul class="nav nav-pills d-flex align-items-center gap-3" id="myTab" role="tablist">
+  <ul
+    class="nav nav-pills d-flex align-items-center gap-3"
+    id="myTab"
+    role="tablist"
+  >
     <li class="nav-item" role="presentation">
       <a
         class="nav-link active"
@@ -60,11 +67,69 @@
     </li>
   </ul>
 </nav>
-
-
 <!-- Tab panes -->
 <div class="tab-content text-white px-5 pt-5 background height">
-  <div
+  <!-- 🌌 Home Section -->
+<div
+  class="tab-pane show active fade-in-up"
+  id="home"
+  role="tabpanel"
+  aria-labelledby="home-tab"
+>
+  <div class="container py-5">
+    <div class="row align-items-center justify-content-center text-light">
+      <!-- 👩‍💻 Intro Text -->
+      <div class="col-lg-6 col-md-7 text-start mb-5 mb-lg-0">
+        <h1 class="gradient-text fw-bold mb-3 typewriter">{{ displayedText }}</h1>
+        <h4 class="text-light mb-4">{{ displayedText2 }}</h4>
+
+        <p class="about-text mb-3">
+          Hi, I’m <span class="headscolor fw-semibold">Vanshika Parihar</span>,
+          a passionate Software Development Engineer dedicated to building
+          scalable, high-performance, and user-focused web applications.
+        </p>
+        <p class="about-text mb-4">
+          My expertise spans across
+          <strong>Angular 19</strong>, <strong>TypeScript</strong>,
+          <strong>AdonisJS</strong>, and <strong>PHP</strong> — turning
+          challenging ideas into elegant, efficient digital experiences.
+        </p>
+
+        <!-- 🔗 Buttons -->
+        <div class="d-flex gap-3">
+          <a
+            href="https://github.com/vanshikaparihar"
+            target="_blank"
+            class="cv"
+          >
+            <i class="fa-brands fa-github me-2"></i> GitHub
+          </a>
+          <a
+            href="assets/resume.pdf"
+            download
+            class="cv"
+          >
+            <i class="fa-solid fa-file-arrow-down me-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <!-- 🖼️ Profile Image Card -->
+      <div class="col-lg-5 col-md-5 d-flex justify-content-center">
+        <div class="profile-card shadow-lg rounded-4 overflow-hidden position-relative">
+          <img
+            src="assets/profile.jpg"
+            alt="Vanshika Parihar"
+            class="profile-img"
+          />
+          <div class="profile-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <div
     class="tab-pane show active"
     id="home"
     role="tabpanel"
@@ -95,7 +160,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div
     class="tab-pane fade"
     id="profile"
@@ -379,7 +444,7 @@
       <!-- 🌟 Experience Section -->
       <div class="container my-5">
         <h2 class="fw-bold gradient-text text-center mb-5">
-          Experience & Projects
+          Key Projects
         </h2>
 
         <!-- 🟣 MAIN PROJECT -->
@@ -521,68 +586,80 @@
   </div>
 
   <!-- 🌌 Contact Tab -->
-<div
-  class="tab-pane fade-in-up"
-  id="contact"
-  role="tabpanel"
-  aria-labelledby="contact-tab"
->
-  <div class="container my-5 text-center">
-    <h2 class="fw-bold gradient-text mb-4">Let’s Connect ✨</h2>
-    <p class="about-text mb-5" style="max-width: 700px; margin: auto;">
-      I love connecting with creative minds, developers, and innovators.  
-      Whether you want to collaborate on a project, discuss tech ideas, or just say hi — feel free to reach out!
-    </p>
-
-    <!-- 🌠 Quote Card -->
-    <div class="quote-card mx-auto mb-5">
-      <p class="quote-text">
-        “Great things are done by a series of small things brought together.”
+  <div
+    class="tab-pane fade-in-up"
+    id="contact"
+    role="tabpanel"
+    aria-labelledby="contact-tab"
+  >
+    <div class="container my-5 text-center">
+      <h2 class="fw-bold gradient-text mb-4">Let’s Connect ✨</h2>
+      <p class="about-text mb-5" style="max-width: 700px; margin: auto">
+        I love connecting with creative minds, developers, and innovators.
+        Whether you want to collaborate on a project, discuss tech ideas, or
+        just say hi — feel free to reach out!
       </p>
-      <span class="quote-author">– Vincent Van Gogh</span>
-    </div>
 
-    <!-- 🌐 Contact Options -->
-    <div class="row justify-content-center g-4 mt-4">
-      <!-- Email -->
-      <div class="col-md-3">
-        <div class="contact-card">
-          <i class="fa-solid fa-envelope"></i>
-          <h5>Email</h5>
-          <p>vanshika.parihar@example.com</p>
-        </div>
+      <!-- 🌠 Quote Card -->
+      <div class="quote-card mx-auto mb-5">
+        <p class="quote-text">
+          “Great things are done by a series of small things brought together.”
+        </p>
+        <span class="quote-author">– Vincent Van Gogh</span>
       </div>
 
-      <!-- LinkedIn -->
-      <div class="col-md-3">
-        <div class="contact-card">
-          <i class="fa-brands fa-linkedin"></i>
-          <h5>LinkedIn</h5>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
+      <!-- 🌐 Contact Options -->
+      <div class="row justify-content-center g-4 mt-4">
+        <!-- Email -->
+        <div class="col-md-3">
+          <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h5>Email</h5>
+            <a href="mailto:vanshikaparihaar0@gmail.com" class="contact-link"
+              >vanshikaparihaar0@gmail.com</a
+            >
+          </div>
         </div>
-      </div>
 
-      <!-- GitHub -->
-      <div class="col-md-3">
-        <div class="contact-card">
-          <i class="fa-brands fa-github"></i>
-          <h5>GitHub</h5>
-          <a href="https://github.com/yourusername" target="_blank">View My Work</a>
+        <!-- LinkedIn -->
+        <div class="col-md-3">
+          <div class="contact-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <h5>LinkedIn</h5>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+              >Connect with me</a
+            >
+          </div>
         </div>
-      </div>
 
-      <!-- Location -->
-      <div class="col-md-3">
-        <div class="contact-card">
-          <i class="fa-solid fa-location-dot"></i>
-          <h5>Location</h5>
-          <p>Gwalior, India</p>
+        <!-- GitHub -->
+        <div class="col-md-3">
+          <div class="contact-card">
+            <i class="fa-brands fa-github"></i>
+            <h5>GitHub</h5>
+            <a href="https://github.com/yourusername" target="_blank"
+              >View My Work</a
+            >
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 </div>
+<!-- 🌌 Footer Section -->
+<footer class="footer text-center py-4 ">
+  <div class="container">
+    <h5 class="gradient-text fw-bold mb-3">Vanshika Parihar</h5>
+    <p class="about-text mb-4">
+      Passionate Software Developer | Turning Ideas into Scalable, Elegant Digital Experiences ✨
+    </p>
 
-</div>
+    <div class="location-info mb-3">
+      <i class="fa-solid fa-location-dot me-2"></i>
+      <span>Gwalior, India</span>
+    </div>
+  </div>
+</footer>
 
 <router-outlet />

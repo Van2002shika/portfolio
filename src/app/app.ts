@@ -13,6 +13,8 @@ export class App {
   ft = 'Software development Engineer II';
   displayedText = '';
   displayedText2 = '';
+  currentYear = new Date().getFullYear();
+
   private index = 0;
   private index2 = 0;
   constructor(private el: ElementRef) {}
