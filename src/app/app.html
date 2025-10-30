@@ -1,4 +1,3 @@
-
 <!-- 🌑 Elegant Black Navbar -->
 <nav
   class="navbar-container d-flex align-items-center justify-content-between px-5 py-3"
@@ -48,7 +47,7 @@
         aria-controls="messages"
         aria-selected="false"
       >
-        <i class="fa-solid fa-briefcase"></i> Experience
+        <i class="fa-solid fa-briefcase"></i> Projects
       </a>
     </li>
 
@@ -70,97 +69,59 @@
 <!-- Tab panes -->
 <div class="tab-content text-white px-5 pt-5 background height">
   <!-- 🌌 Home Section -->
-<div
-  class="tab-pane show active fade-in-up"
-  id="home"
-  role="tabpanel"
-  aria-labelledby="home-tab"
->
-  <div class="container py-5">
-    <div class="row align-items-center justify-content-center text-light">
-      <!-- 👩‍💻 Intro Text -->
-      <div class="col-lg-6 col-md-7 text-start mb-5 mb-lg-0">
-        <h1 class="gradient-text fw-bold mb-3 typewriter">{{ displayedText }}</h1>
-        <h4 class="text-light mb-4">{{ displayedText2 }}</h4>
-
-        <p class="about-text mb-3">
-          Hi, I’m <span class="headscolor fw-semibold">Vanshika Parihar</span>,
-          a passionate Software Development Engineer dedicated to building
-          scalable, high-performance, and user-focused web applications.
-        </p>
-        <p class="about-text mb-4">
-          My expertise spans across
-          <strong>Angular 19</strong>, <strong>TypeScript</strong>,
-          <strong>AdonisJS</strong>, and <strong>PHP</strong> — turning
-          challenging ideas into elegant, efficient digital experiences.
-        </p>
-
-        <!-- 🔗 Buttons -->
-        <div class="d-flex gap-3">
-          <a
-            href="https://github.com/vanshikaparihar"
-            target="_blank"
-            class="cv"
-          >
-            <i class="fa-brands fa-github me-2"></i> GitHub
-          </a>
-          <a
-            href="assets/resume.pdf"
-            download
-            class="cv"
-          >
-            <i class="fa-solid fa-file-arrow-down me-2"></i> Download CV
-          </a>
-        </div>
-      </div>
-
-      <!-- 🖼️ Profile Image Card -->
-      <div class="col-lg-5 col-md-5 d-flex justify-content-center">
-        <div class="profile-card shadow-lg rounded-4 overflow-hidden position-relative">
-          <img
-            src="assets/profile.jpg"
-            alt="Vanshika Parihar"
-            class="profile-img"
-          />
-          <div class="profile-glow"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- <div
-    class="tab-pane show active"
+  <div
+    class="tab-pane show active fade-in-up"
     id="home"
     role="tabpanel"
     aria-labelledby="home-tab"
   >
-    <div class="row mb-5 justify-content-center mx-5">
-      <div class="col-sm-4 mt-5 mx-5">
-        <h1 class="typewriter">{{ displayedText }}</h1>
+    <div class="container py-5">
+      <div class="row align-items-center justify-content-center text-light">
+        <!-- 👩‍💻 Intro Text -->
+        <div class="col-lg-6 col-md-7 text-start mb-5 mb-lg-0">
+          <h1 class="gradient-text fw-bold mb-3 typewriter">
+            {{ displayedText }}
+          </h1>
+          <h4 class="text-light mb-4">{{ displayedText2 }}</h4>
 
-        <h4 class="mt-4">{{ displayedText2 }}</h4>
-        <p class="mt-4">
-          Hi, I’m Vanshika Parihar, a passionate Software Development Engineer
-          specializing in building efficient, scalable, and user-centric web
-          applications. I thrive on turning complex problems into simple,
-          elegant digital solutions using Angular19, TypeScript,PHP, and
-          AdonisJS. My work focuses on performance, clean architecture, and
-          modern UI experiences — all while maintaining robust backend
-          integrity.
-        </p>
-        <p class="mt-4">
-          <button class="cv">GitHub</button><button class="cv">cv</button>
-        </p>
-      </div>
-      <div class="col-sm-4 mt-5 mx-5">
-        <div class="card">
-          <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-          <div class="card-body"></div>
+          <p class="about-text mb-3">
+            Hi, I’m
+            <span class="headscolor fw-semibold">Vanshika Parihar</span>, a
+            passionate Software Development Engineer dedicated to building
+            scalable, high-performance, and user-focused web applications.
+          </p>
+          <p class="about-text mb-4">
+            My expertise spans across
+            <strong>Angular 19</strong>, <strong>TypeScript</strong>,
+            <strong>AdonisJS</strong>, and <strong>PHP</strong> — turning
+            challenging ideas into elegant, efficient digital experiences.
+          </p>
+
+          <!-- 🔗 Buttons -->
+          <div class="d-flex gap-3">
+            <a> <i class="fa-brands fa-github me-2"></i> View My Work </a>
+            <a href="assets/resume.pdf" download class="cv">
+              <i class="fa-solid fa-file-arrow-down me-2"></i> Download CV
+            </a>
+          </div>
+        </div>
+
+        <!-- 🖼️ Profile Image Card -->
+        <div class="col-lg-5 col-md-5 d-flex justify-content-center">
+          <div
+            class="profile-card shadow-lg rounded-4 overflow-hidden position-relative"
+          >
+            <img
+              src="assets/profile.jpg"
+              alt="Vanshika Parihar"
+              class="profile-img"
+            />
+            <div class="profile-glow"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <div
     class="tab-pane fade"
     id="profile"
@@ -443,9 +404,7 @@
 
       <!-- 🌟 Experience Section -->
       <div class="container my-5">
-        <h2 class="fw-bold gradient-text text-center mb-5">
-          Key Projects
-        </h2>
+        <h2 class="fw-bold gradient-text text-center mb-5">Key Projects</h2>
 
         <!-- 🟣 MAIN PROJECT -->
         <div class="row justify-content-center mb-5">
@@ -497,6 +456,7 @@
                   </li>
                 </ul>
               </div>
+              <a> <i class="fa-brands fa-github me-2"></i> View My Work </a>
             </div>
           </div>
         </div>
@@ -642,17 +602,17 @@
             >
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
 <!-- 🌌 Footer Section -->
-<footer class="footer text-center py-4 ">
+<footer class="footer text-center py-4">
   <div class="container">
     <h5 class="gradient-text fw-bold mb-3">Vanshika Parihar</h5>
     <p class="about-text mb-4">
-      Passionate Software Developer | Turning Ideas into Scalable, Elegant Digital Experiences ✨
+      Passionate Software Developer | Turning Ideas into Scalable, Elegant
+      Digital Experiences ✨
     </p>
 
     <div class="location-info mb-3">
