@@ -77,13 +77,13 @@
   box-shadow: 0 0 10px rgba(155, 107, 197, 0.6);
 }
 
-/* 🖱️ SCROLLABLE AREA */
+/* 🖱️ SCROLLABLE AREA
 .height {
-  height: 70vh;
+  height: 30%;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #7d52a1 #000;
-}
+} */
 
 .height::-webkit-scrollbar {
   width: 6px;
@@ -724,4 +724,211 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, #7d52a1, transparent);
   box-shadow: 0 0 12px rgba(125, 82, 161, 0.5);
+}
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(125, 82, 161, 0.2);
+  border-radius: 16px;
+  color: #e4e4e7;
+  transition: all 0.4s ease;
+  max-width: 700px;
+  backdrop-filter: blur(12px);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(125, 82, 161, 0.4);
+  border-color: rgba(125, 82, 161, 0.4);
+}
+
+.project-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
+
+.cv {
+  background: linear-gradient(90deg, #7d52a1, #9b6bc5);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 6px 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(125, 82, 161, 0.5);
+}
+
+.modal-content {
+  background: #000;
+  border-radius: 16px;
+  border: 1px solid rgba(125, 82, 161, 0.3);
+  box-shadow: 0 0 30px rgba(125, 82, 161, 0.3);
+}
+
+.border-purple {
+  border-color: rgba(125, 82, 161, 0.4) !important;
+}
+
+.about-text li {
+  color: #c5c5c5;
+  margin-bottom: 10px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #b57bff, #9b6bc5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* 🌌 Featured Projects Section */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.8rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.featured-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(125, 82, 161, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(125, 82, 161, 0.15);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.featured-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(125, 82, 161, 0.4);
+  border-color: rgba(125, 82, 161, 0.4);
+}
+
+/* 🔹 Image styling */
+.featured-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.featured-card:hover .featured-img img {
+  transform: scale(1.05);
+}
+
+/* 🔹 Content styling */
+.featured-content {
+  padding: 1.2rem 1.5rem;
+}
+
+.featured-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.featured-content p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* 🔹 Button */
+.view-btn {
+  background: linear-gradient(90deg, #7d52a1, #9b6bc5);
+  color: #fff;
+  border-radius: 25px;
+  padding: 6px 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  box-shadow: 0 0 15px rgba(125, 82, 161, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ✨ Animation */
+.fade-in-up {
+  animation: fadeInUp 0.9s ease both;
+}
+
+.fade-in-up.delay-1 {
+  animation-delay: 0.2s;
+}
+.fade-in-up.delay-2 {
+  animation-delay: 0.4s;
+}
+.fade-in-up.delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}.tab-pane {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.tab-pane.active.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.tab-pane.fade {
+  opacity: 0;
+  transform: translateY(10px);
+}
+/* 🌑 Sticky Footer */
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  border-top: 1px solid rgba(125, 82, 161, 0.25);
+  color: #dcdcdc;
+  text-align: center;
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 12px rgba(125, 82, 161, 0.15);
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+/* Ensures footer stays at bottom if content is short */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-content {
+  flex: 1; /* pushes footer to bottom */
+}
+
+/* Optional subtle hover effect */
+.footer:hover {
+  background: linear-gradient(90deg, #000, #1a001a);
+  box-shadow: 0 -6px 20px rgba(125, 82, 161, 0.25);
 }
