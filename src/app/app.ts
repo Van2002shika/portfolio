@@ -10,6 +10,15 @@ interface Project {
   category: string;
   image: string;
 }
+
+interface otherProject {
+  title: string;
+  image: string;
+  alt: string;
+  description: string;
+  highlights: string[];
+}
+
 interface FeaturedProject {
   title: string;
   image: string;
@@ -18,7 +27,19 @@ interface FeaturedProject {
   delay?: string;
   colSize: string;
 }
+interface Education {
+  degree: string;
+  university: string;
+  year: string;
+  status: string;
+}
 
+
+interface SkillCategory {
+  title: string;
+  icon: string;
+  skills: { name: string; icon: string }[];
+}
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule],
@@ -40,7 +61,7 @@ export class App {
     this.typeWriter();
   }
   ngAfterViewInit(): void {
-        const triggerTabList = document.querySelectorAll('#myTab a');
+    const triggerTabList = document.querySelectorAll('#myTab a');
     triggerTabList.forEach((triggerEl) => {
       const tabTrigger = new bootstrap.Tab(triggerEl);
       triggerEl.addEventListener('click', (event) => {
@@ -69,7 +90,6 @@ export class App {
     }
   }
 
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.revealOnScroll();
@@ -84,7 +104,52 @@ export class App {
       }
     });
   }
-
+    educationList: Education[] = [
+    {
+      degree: 'Master of Business Administration (MBA)',
+      university: 'Vikrant University, Gwalior, India',
+      year: 'Completed July 2025',
+      status: 'Completed'
+    },
+    {
+      degree: 'Bachelor of Commerce (Computers)',
+      university: 'Jiwaji University, Gwalior, India',
+      year: 'Completed June 2023',
+      status: 'Completed'
+    }
+  ];
+  skillCategories: SkillCategory[] = [
+    {
+      title: 'Frontend',
+      icon: 'fa-solid fa-code',
+      skills: [
+        { name: 'Angular', icon: 'fa-brands fa-angular' },
+        { name: 'TypeScript', icon: 'fa-solid fa-code' },
+        { name: 'JavaScript', icon: 'fa-brands fa-js' },
+        { name: 'HTML5', icon: 'fa-brands fa-html5' },
+        { name: 'CSS3', icon: 'fa-brands fa-css3-alt' },
+      ],
+    },
+    {
+      title: 'Backend',
+      icon: 'fa-solid fa-server',
+      skills: [
+        { name: 'AdonisJS', icon: 'fa-brands fa-node-js' },
+        { name: 'PHP', icon: 'fa-brands fa-php' },
+        { name: 'Node.js', icon: 'fa-solid fa-cube' },
+      ],
+    },
+    {
+      title: 'Database & Tools',
+      icon: 'fa-solid fa-database',
+      skills: [
+        { name: 'MySQL', icon: 'fa-solid fa-database' },
+        { name: 'Git', icon: 'fa-brands fa-git-alt' },
+        { name: 'GitHub', icon: 'fa-brands fa-github' },
+        { name: 'SaaS', icon: 'fa-solid fa-cloud' },
+      ],
+    },
+  ];
   selectedProject: Project | null = null;
 
   projects: Project[] = [
@@ -148,6 +213,17 @@ export class App {
       ],
     },
   ];
+  contacttab: any = [
+    {
+      blog_maintext: `A glimpse into my journey of building enterprise-grade applications in
+        CRM, HRMS, Recruitment, and PHP development — each designed with
+        performance, scalability, and elegance.`,
+      contact_maintext: `I love connecting with creative minds, developers, and innovators.
+        Whether you want to collaborate on a project, discuss tech ideas, or
+        just say hi — feel free to reach out!`,
+      contact_subtext: `“Great things are done by a series of small things brought together.” `,
+    },
+  ];
   featuredProjects: FeaturedProject[] = [
     {
       title: 'React Chat Application',
@@ -186,7 +262,34 @@ export class App {
       colSize: 'col-md-3',
     },
   ];
-
+  otherProjects: otherProject[] = [
+    {
+      title: 'HRMS — Human Resource Management System',
+      image:
+        'Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM.png',
+      alt: 'HRMS Project',
+      description: `Built a robust HRMS platform to automate workforce management including employee records, payroll, and attendance tracking. 
+      The platform improved HR productivity by 35%.`,
+      highlights: [
+        'Developed interactive employee dashboards and payroll automation workflows.',
+        'Integrated backend APIs for HR operations and performance reports.',
+        'Enhanced user accessibility and data accuracy across modules.',
+      ],
+    },
+    {
+      title: 'UbiRecruit — Recruitment Management System',
+      image:
+        'Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM (1).png',
+      alt: 'Recruitment Project',
+      description: `Created an automated recruitment platform that streamlined candidate sourcing, interview scheduling, and onboarding, 
+      reducing average hiring time by 25%.`,
+      highlights: [
+        'Built recruiter dashboards with real-time candidate tracking.',
+        'Added intelligent filtering and search for faster hiring workflows.',
+        'Optimized backend logic for seamless communication and status updates.',
+      ],
+    },
+  ];
   openModal(project: Project) {
     this.selectedProject = project;
     const modal = document.getElementById('projectModal');

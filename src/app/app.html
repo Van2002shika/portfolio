@@ -1,4 +1,3 @@
-
 <!-- 🌑 Elegant Black Navbar -->
 <nav
   class="navbar-container d-flex align-items-center justify-content-between px-5 py-3"
@@ -84,7 +83,7 @@
 <div class="tab-content text-white px-5 pt-5 background height">
   <!-- 🌌 Home Section -->
   <div
-    class="tab-pane show  active fade-in-up"
+    class="tab-pane show active fade-in-up"
     id="home"
     role="tabpanel"
     aria-labelledby="home-tab"
@@ -179,7 +178,8 @@
 
               <!-- LinkedIn -->
               <a
-                href="https://linkedin.com/in/vanshikaparihar"
+                href="https://linkedin.com/in/vanshika-parihar-506131289
+ "
                 target="_blank"
                 class="social-btn linkedin"
                 title="Connect on LinkedIn"
@@ -283,18 +283,19 @@
           <div class="education-card p-4 text-center shadow-lg rounded-4">
             <h3 class="fw-bold gradient-text mb-3">Education</h3>
 
-            <div class="edu-item mb-4">
-              <h5 class="fw-semibold">
-                Master of Business Administration (MBA)
-              </h5>
-              <p class="mb-1 text-muted">Vikrant University, Gwalior, India</p>
-              <p class="edu-year">Expected July 2025 (Pursuing)</p>
-            </div>
-
-            <div class="edu-item">
-              <h5 class="fw-semibold">Bachelor of Commerce (Computers)</h5>
-              <p class="mb-1 text-muted">Jiwaji University, Gwalior, India</p>
-              <p class="edu-year">Completed June 2023</p>
+            <div
+              class="edu-item mb-4"
+              *ngFor="let edu of educationList; let last = last"
+              [ngClass]="{ 'mb-0': last }"
+            >
+              <h5 class="fw-semibold">{{ edu.degree }}</h5>
+              <p class="mb-1 text-muted">{{ edu.university }}</p>
+              <p class="edu-year">
+                {{ edu.year }}
+                <span *ngIf="edu.status" class="text-gradient"
+                  >({{ edu.status }})</span
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -303,71 +304,15 @@
             <h3 class="fw-bold gradient-text mb-4">Technical Skills</h3>
 
             <div class="row justify-content-center text-center gy-4">
-              <!-- Frontend -->
-              <div class="col-md-4">
+              <div class="col-md-4" *ngFor="let category of skillCategories">
                 <h5 class="fw-semibold mb-3 text-white">
-                  <i class="fa-solid fa-code"></i> Frontend
+                  <i [class]="category.icon"></i> {{ category.title }}
                 </h5>
                 <div
                   class="skills-group d-flex flex-wrap justify-content-center gap-3"
                 >
-                  <div class="skill-item">
-                    <i class="fa-brands fa-angular"></i> Angular
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-solid fa-code"></i> TypeScript
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-js"></i> JavaScript
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-html5"></i> HTML5
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-css3-alt"></i> CSS3
-                  </div>
-                </div>
-              </div>
-
-              <!-- Backend -->
-              <div class="col-md-4">
-                <h5 class="fw-semibold mb-3 text-white">
-                  <i class="fa-solid fa-server"></i> Backend
-                </h5>
-                <div
-                  class="skills-group d-flex flex-wrap justify-content-center gap-3"
-                >
-                  <div class="skill-item">
-                    <i class="fa-brands fa-node-js"></i> AdonisJS
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-php"></i> PHP
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-solid fa-cube"></i> Node.js
-                  </div>
-                </div>
-              </div>
-
-              <!-- Database & Tools -->
-              <div class="col-md-4">
-                <h5 class="fw-semibold mb-3 text-white">
-                  <i class="fa-solid fa-database"></i> Database & Tools
-                </h5>
-                <div
-                  class="skills-group d-flex flex-wrap justify-content-center gap-3"
-                >
-                  <div class="skill-item">
-                    <i class="fa-solid fa-database"></i> MySQL
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-git-alt"></i> Git
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-github"></i> GitHub
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-solid fa-cloud"></i> SaaS
+                  <div class="skill-item" *ngFor="let skill of category.skills">
+                    <i [class]="skill.icon"></i> {{ skill.name }}
                   </div>
                 </div>
               </div>
@@ -479,79 +424,29 @@
 
         <!-- 🟢 OTHER PROJECTS -->
         <div class="row justify-content-center g-4">
-          <!-- HRMS -->
-          <div class="col-lg-5 col-md-6">
+          <div class="col-lg-5 col-md-6" *ngFor="let project of otherProjects">
             <div
               class="project-card p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-between"
             >
               <div class="project-image mb-4">
                 <img
-                  src="Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM.png"
-                  alt="HRMS Project"
+                  [src]="project.image"
+                  [alt]="project.alt"
                   class="img-fluid rounded-4 shadow-sm"
                 />
               </div>
               <h4 class="fw-bold text-gradient mb-2">
-                HRMS — Human Resource Management System
+                {{ project.title }}
               </h4>
               <p class="about-text">
-                Built a robust HRMS platform to automate workforce management
-                including employee records, payroll, and attendance tracking.
-                The platform improved HR productivity by <b>35%</b>.
+                {{ project.description }}
               </p>
               <ul
                 class="about-text text-start mx-auto"
                 style="max-width: 400px"
               >
-                <li>
-                  Developed interactive employee dashboards and payroll
-                  automation workflows.
-                </li>
-                <li>
-                  Integrated backend APIs for HR operations and performance
-                  reports.
-                </li>
-                <li>
-                  Enhanced user accessibility and data accuracy across modules.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Recruitment -->
-          <div class="col-lg-5 col-md-6">
-            <div
-              class="project-card p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-between"
-            >
-              <div class="project-image mb-4">
-                <img
-                  src="Best-HRM-Software-Cloud-based-HR-System-ubiHRM-10-23-2025_03_58_PM (1).png"
-                  alt="Recruitment Project"
-                  class="img-fluid rounded-4 shadow-sm"
-                />
-              </div>
-              <h4 class="fw-bold text-gradient mb-2">
-                UbiRecruit — Recruitment Management System
-              </h4>
-              <p class="about-text">
-                Created an automated recruitment platform that streamlined
-                candidate sourcing, interview scheduling, and onboarding,
-                reducing average hiring time by <b>25%</b>.
-              </p>
-              <ul
-                class="about-text text-start mx-auto"
-                style="max-width: 400px"
-              >
-                <li>
-                  Built recruiter dashboards with real-time candidate tracking.
-                </li>
-                <li>
-                  Added intelligent filtering and search for faster hiring
-                  workflows.
-                </li>
-                <li>
-                  Optimized backend logic for seamless communication and status
-                  updates.
+                <li *ngFor="let item of project.highlights">
+                  {{ item }}
                 </li>
               </ul>
             </div>
@@ -571,9 +466,7 @@
     <div class="container my-5 text-center fade-in-up">
       <h2 class="fw-bold gradient-text mb-4">Project Experience ✨</h2>
       <p class="about-text mb-5" style="max-width: 700px; margin: auto">
-        A glimpse into my journey of building enterprise-grade applications in
-        CRM, HRMS, Recruitment, and PHP development — each designed with
-        performance, scalability, and elegance.
+        {{ contacttab[0].blog_maintext }}
       </p>
 
       <!-- 🖱️ Sliding Carousel -->
@@ -659,15 +552,13 @@
     <div class="container my-5 text-center">
       <h2 class="fw-bold gradient-text mb-4">Let’s Connect ✨</h2>
       <p class="about-text mb-5" style="max-width: 700px; margin: auto">
-        I love connecting with creative minds, developers, and innovators.
-        Whether you want to collaborate on a project, discuss tech ideas, or
-        just say hi — feel free to reach out!
+        {{ contacttab[0].contact_maintext }}
       </p>
 
       <!-- 🌠 Quote Card -->
       <div class="quote-card mx-auto mb-5">
         <p class="quote-text">
-          “Great things are done by a series of small things brought together.”
+          {{ contacttab[0].contact_subtext }}
         </p>
         <span class="quote-author">– Vincent Van Gogh</span>
       </div>
@@ -690,7 +581,9 @@
           <div class="contact-card">
             <i class="fa-brands fa-linkedin"></i>
             <h5>LinkedIn</h5>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+            <a
+              href="https://linkedin.com/in/vanshika-parihar-506131289"
+              target="_blank"
               >Connect with me</a
             >
           </div>
