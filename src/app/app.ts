@@ -26,6 +26,7 @@ interface FeaturedProject {
   link: string;
   delay?: string;
   colSize: string;
+  class:string
 }
 interface Education {
   degree: string;
@@ -233,33 +234,37 @@ export class App {
       link: 'https://github.com/vanshikaparihar/react-chat-app',
       delay: '',
       colSize: 'col-md-4',
+      class:'d-block'
     },
     {
       title: 'Facebook Clone',
-      image: 'assets/images/facebook-clone.jpg',
+      image: 'Facebook_logo_(square).png',
       description:
         'A social media web app created with Angular that mimics Facebook’s interface — featuring posts, likes, comments, and profile management.',
       link: 'https://github.com/vanshikaparihar/facebook-clone-angular',
       delay: 'delay-1',
       colSize: 'col-md-8',
+      class:'d-flex'
     },
     {
       title: 'Instagram Clone',
-      image: 'assets/images/instagram-clone.jpg',
+      image: 'cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMDAzLmpwZw.webp',
       description:
         'Built using Angular and Firebase — supports photo uploads, stories, likes, and real-time feed updates with user authentication.',
       link: 'https://github.com/vanshikaparihar/instagram-clone-angular',
       delay: 'delay-2',
       colSize: 'col-md-9',
+      class:'d-flex'
     },
     {
       title: 'Cinepolis Clone',
-      image: 'assets/images/cinepolis-clone.jpg',
+      image: 'Logo_Cinepolis_2019.jpg',
       description:
         'A cinema booking app developed with React. Integrated real-time movie schedules, seat booking, and payment simulation APIs.',
       link: 'https://github.com/vanshikaparihar/cinepolis-clone-react',
       delay: 'delay-3',
       colSize: 'col-md-3',
+      class:'d-block'
     },
   ];
   otherProjects: otherProject[] = [

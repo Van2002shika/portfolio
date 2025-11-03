@@ -522,8 +522,8 @@
               [ngClass]="project.colSize"
               class="mb-4"
             >
-              <div class="featured-card fade-in-up" [ngClass]="project.delay">
-                <div class="featured-img">
+              <div class="featured-card fade-in-up" [ngClass]="project.delay" class="{{project.class}}">
+                <div class="featured-img mt-2">
                   <img [src]="project.image" [alt]="project.title" />
                 </div>
                 <div class="featured-content">
