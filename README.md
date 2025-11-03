@@ -118,9 +118,9 @@ Designed to highlight professional experience, skills, and achievements in a vis
 
 | Platform | Link |
 |-----------|------|
-| 💼 **LinkedIn** | [linkedin.com/in/vanshika-parihar](https://linkedin.com/in/vanshika-parihar) |
+| 💼 **LinkedIn** | [linkedin.com/in/vanshika-parihar](https://linkedin.com/in/vanshika-parihar-506131289) |
 | 🐙 **GitHub** | [github.com/vanshikaparihar](https://github.com/vanshikaparihar) |
-| ✉️ **Email** | vanshika.parihar@example.com |
+| ✉️ **Email** | vanshikaparihaar0@gmail.com |
 
 ---
 
