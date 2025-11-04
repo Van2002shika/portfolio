@@ -26,7 +26,8 @@ interface FeaturedProject {
   link: string;
   delay?: string;
   colSize: string;
-  class:string
+  class:string,
+  framework:any
 }
 interface Education {
   degree: string;
@@ -125,6 +126,7 @@ export class App {
       icon: 'fa-solid fa-code',
       skills: [
         { name: 'Angular', icon: 'fa-brands fa-angular' },
+        { name: 'React', icon: 'fab fa-react' },
         { name: 'TypeScript', icon: 'fa-solid fa-code' },
         { name: 'JavaScript', icon: 'fa-brands fa-js' },
         { name: 'HTML5', icon: 'fa-brands fa-html5' },
@@ -234,7 +236,8 @@ export class App {
       link: 'https://github.com/vanshikaparihar/react-chat-app',
       delay: '',
       colSize: 'col-md-4',
-      class:'d-block'
+      class:'d-block',
+      framework:['React','Adonis js']
     },
     {
       title: 'Facebook Clone',
@@ -244,7 +247,8 @@ export class App {
       link: 'https://github.com/vanshikaparihar/facebook-clone-angular',
       delay: 'delay-1',
       colSize: 'col-md-8',
-      class:'d-flex mx-4'
+      class:'d-flex mx-4',
+      framework:['Angular','TypeScript','Adonis js']
     },
     {
       title: 'Instagram Clone',
@@ -254,7 +258,8 @@ export class App {
       link: 'https://github.com/vanshikaparihar/instagram-clone-angular',
       delay: 'delay-2',
       colSize: 'col-md-9',
-      class:'d-flex mx-4'
+      class:'d-flex mx-4',
+      framework:['Angular','TypeScript','PHP']
     },
     {
       title: 'Cinepolis Clone',
@@ -264,7 +269,8 @@ export class App {
       link: 'https://github.com/vanshikaparihar/cinepolis-clone-react',
       delay: 'delay-3',
       colSize: 'col-md-3',
-      class:'d-block'
+      class:'d-block',
+      framework:['React','TypeScript','Express js']
     },
   ];
   otherProjects: otherProject[] = [

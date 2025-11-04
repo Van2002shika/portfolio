@@ -826,6 +826,7 @@
   height: 120px;
   object-fit: contain;
   transition: all 0.4s ease;
+  
 }
 
 .featured-card:hover .featured-img img {
@@ -932,3 +933,18 @@ body {
   background: linear-gradient(90deg, #000, #1a001a);
   box-shadow: 0 -6px 20px rgba(125, 82, 161, 0.25);
 }
+
+.view-btn {
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-outline-primary {
+  border: 1px solid #7d52a1;
+  color:  #fff;
+}
+
