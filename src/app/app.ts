@@ -230,7 +230,7 @@ export class App {
   featuredProjects: FeaturedProject[] = [
     {
       title: 'React Chat Application',
-      image: 'assets/images/chat-app.jpg',
+      image: 'OIP (3).jpg',
       description:
         'A real-time chat platform built using React and Firebase for seamless instant messaging, authentication, and live user presence tracking.',
       link: 'https://github.com/vanshikaparihar/react-chat-app',
