@@ -244,7 +244,7 @@ export class App {
       link: 'https://github.com/vanshikaparihar/facebook-clone-angular',
       delay: 'delay-1',
       colSize: 'col-md-8',
-      class:'d-flex'
+      class:'d-flex mx-4'
     },
     {
       title: 'Instagram Clone',
@@ -254,7 +254,7 @@ export class App {
       link: 'https://github.com/vanshikaparihar/instagram-clone-angular',
       delay: 'delay-2',
       colSize: 'col-md-9',
-      class:'d-flex'
+      class:'d-flex mx-4'
     },
     {
       title: 'Cinepolis Clone',
